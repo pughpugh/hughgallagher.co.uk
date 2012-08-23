@@ -1,0 +1,62 @@
+body {
+    font-family: 'Quicksand';
+    font-size: 13px;
+    width: 100%;
+}
+
+h1, h2, h3, h4, .label {
+}
+
+h1 {
+    color: #556B2F;
+    margin-bottom: 2px;
+}
+
+h2 {
+    color: #999;
+    margin-top: 2px;
+    font-size: 19px;
+}
+
+h3 {
+    color: #6E8B3D;
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+h4 {
+    color: #999;
+    font-size: 13px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+#content {
+    background-color: #FFF;
+    padding: 30px 40px 30px 40px;
+}
+
+#wrapper {
+    width: 100%;
+    padding: 0px;
+}
+
+#contact {
+    float: right;
+    position: relative;
+    top: 20px;
+}
+
+.label {
+    text-align: right;
+    padding-right: 5px;
+    color: #6E8B3D;
+}
+
+.page-break { 
+    padding-top: 40px;
+    page-break-before: always; 
+}
