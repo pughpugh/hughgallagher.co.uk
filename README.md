@@ -1,4 +1,6 @@
 hughgallagher.co.uk
 ===================
 
-Hugh Gallagher's Homepage for hosting CV and other personal stuff.
+Hugh Gallagher's homepage for hosting CV and other personal stuff.
+
+www.hughgallagher.co.uk
