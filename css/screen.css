@@ -10,43 +10,89 @@ h1, h2, h3, h4, .label {
 }
 
 h1 {
-    color: #556B2F;
+    color: #5a843b;
     margin-bottom: 2px;
+    font-weight: 400;
 }
 
 h2 {
     color: #999;
     margin-top: 2px;
     font-size: 19px;
+    font-weight: 400;
 }
 
 h3 {
-    color: #6E8B3D;
+    color: #82a449;
     font-size: 19px;
     margin-top: 30px;
+    font-weight: 400;
 }
 
 h4 {
     color: #999;
     font-size: 17px;
+    font-weight: 400;
 }
 
 a {
     color: #000;
 }
 
-#content {
+.content {
     background-color: #FFF;
-    padding: 30px 40px 30px 40px;
+    padding: 10px 40px 30px 40px;
+}
+
+.nav {
+    position: relative;
+    background-color: #F0F0F0;
+    color: black;
+    padding: 5px;
+    text-align: right;
+    background-image: url('../img/nav.png');
+    height: 18px;
+}
+
+.nav a {
+    color: #555;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.activelink {
+    font-weight: 700;
+}
+
+#allpages {
+    position: relative;
+    top: 6px;
+    left: 10px;
+    padding-right: 20px;
+}
+
+.page {
     -moz-box-shadow: 0px 0px 10px #888;
     -webkit-box-shadow: 0px 0px 10px #888;
     box-shadow: 0px 0px 10px #888;
+    margin-bottom: 27px;
 }
 
-#wrapper {
+#page1 {
     width: 800px;
-    margin: auto;
     padding: 0px;
+    top; 0px;
+    left: 0px;
+    float: left;
+}
+
+#page2 {
+    width: 800px;
+    padding: 0px;
+    position: absolute;
+    top; 0px;
+    left: 830px;
+    display: none;
 }
 
 #contact {

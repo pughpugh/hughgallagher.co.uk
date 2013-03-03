@@ -60,3 +60,7 @@ a {
     padding-top: 40px;
     page-break-before: always; 
 }
+
+.nav {
+    display: none;
+}
