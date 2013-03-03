@@ -3,6 +3,7 @@ body {
     margin: 15px;
     font-family: 'Quicksand';
     font-size: 14px;
+    background-image: url('../img/light_toast.png');
 }
 
 h1, h2, h3, h4, .label {
