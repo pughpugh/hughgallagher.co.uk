@@ -66,8 +66,8 @@ a {
 
 #allpages {
     position: relative;
-    top: 6px;
-    left: 10px;
+    top: 1px;
+    left: 0px;
     padding-right: 20px;
 }
 
@@ -76,26 +76,31 @@ a {
     -webkit-box-shadow: 0px 0px 10px #888;
     box-shadow: 0px 0px 10px #888;
     margin-bottom: 27px;
+    width: 800px;
+    padding: 0px;
 }
 
 #page1 {
-    width: 800px;
-    padding: 0px;
     top; 0px;
     left: 0px;
     float: left;
 }
 
 #page2 {
-    width: 800px;
-    padding: 0px;
     position: absolute;
     top; 0px;
     left: 830px;
     display: none;
 }
 
-#contact {
+#page3 {
+    position: absolute;
+    top; 0px;
+    left: 1660px;
+    display: none;
+}
+
+#contactdetails {
     float: right;
     position: relative;
     top: 20px;

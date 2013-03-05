@@ -31,17 +31,27 @@
             var pages=$("#allpages");
             var page1=$("#page1");
             var page2=$("#page2");
+            var page3=$("#page3");
 
             $(".cv").click(function(){
-                pages.animate({ left: "10px" }, 400 );
+                pages.animate({ left: "0px" }, 400 );
                 page1.fadeIn();
                 page2.fadeOut();
+                page3.fadeOut();
             });
 
             $(".more").click(function(){
-                pages.animate({ left: "-820px" }, 400 );
+                pages.animate({ left: "-830px" }, 400 );
                 page1.fadeOut();
                 page2.fadeIn();
+                page3.fadeOut();
+            });
+
+            $(".contact").click(function(){
+                pages.animate({ left: "-1660px" }, 400 );
+                page1.fadeOut();
+                page2.fadeIn();
+                page3.fadeIn();
             });
         });
     </script>
@@ -49,9 +59,13 @@
 <body>
     <div id="allpages">
         <div class="page" id="page1">
-            <div class="nav"><a href="#cv" class="cv activelink">CV</a> | <a href="#more" class="more">More</a></div>
+            <div class="nav">
+                <a href="#cv"      class="cv activelink">CV</a> | 
+                <a href="#more"    class="more">More</a>        |
+                <a href="#contact" class="contact">Contact</a>
+            </div>
             <div class="content">
-                <div id="contact">
+                <div id="contactdetails">
                     <table>
                         <tr>
                             <td class="label">Email:</td>
@@ -63,7 +77,7 @@
                         </tr>
                         <tr>
                             <td class="label">Mobile:</td>
-                            <td>07727640322</td>
+                            <td>+447727640322</td>
                         </tr>
                     </table>
                 </div>
@@ -153,7 +167,11 @@
             </div>
         </div>
         <div class="page" id="page2">
-            <div class="nav"><a href="#cv" class="cv">CV</a> | <a href="#more" class="more activelink">More</a></div>
+            <div class="nav">
+                <a href="#cv"      class="cv">CV</a> | 
+                <a href="#more"    class="more activelink">More</a> |
+                <a href="#contact" class="contact">Contact</a>
+            </div>
             <div class="content">
 
                 <h1>More</h1>
@@ -170,7 +188,31 @@
 
                 <h3>Videos</h3>
                 <a href="http://www.youtube.com/user/SuperMrclean123/videos?flow=grid&view=0">youtube.com/user/SuperMrclean123</a>
+                <br/>
+                <br/>
            </div>
+        </div>
+        <div class="page" id="page3">
+            <div class="nav">
+                <a href="#cv"      class="cv">CV</a> | 
+                <a href="#more"    class="more">More</a> |
+                <a href="#contact" class="contact activelink">Contact</a>
+            </div>
+            <div class="content">
+                <h1>Contact</h1>
+                <h2>Say Hello :)</h2>
+
+                <h3>Direct</h3>
+                <ul>
+                    <li>hugh[at]hcgallagher.co.uk</li>
+                    <li>+447727640322</li>
+                </ul>
+
+                <h3>Networks</h3>
+                <ul>
+                    <li><a href="http://uk.linkedin.com/in/hughgallagher/">linkedin.com</a></li>
+                <ul>
+            </div>
         </div>
     </div>
 </body>
