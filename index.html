@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/screen.css?v=2"  type="text/css" media="screen">
     <link rel="stylesheet" href="css/print.css?v=2" type="text/css" media="print">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquery.ba-bbq.min.js"></script>
 
     <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -33,26 +34,41 @@
             var page2=$("#page2");
             var page3=$("#page3");
 
-            $(".cv").click(function(){
-                pages.animate({ left: "0px" }, 400 );
-                page1.fadeIn();
-                page2.fadeOut();
-                page3.fadeOut();
-            });
+            $(window).bind( 'hashchange', function(e) {
+                var hash = $.param.fragment();
 
-            $(".more").click(function(){
-                pages.animate({ left: "-830px" }, 400 );
-                page1.fadeOut();
-                page2.fadeIn();
-                page3.fadeOut();
+                if( hash === 'cv' ){
+                    pages.animate({ left: "0px" }, 400 );
+                    page1.fadeIn();
+                    page2.fadeOut();
+                    page3.fadeOut();
+                }
+                else if( hash === 'more' ){
+                    pages.animate({ left: "-830px" }, 400 );
+                    page1.fadeOut();
+                    page2.fadeIn();
+                    page3.fadeOut();
+                }
+                else if( hash === 'contact' ){
+                    pages.animate({ left: "-1660px" }, 400 );
+                    page1.fadeOut();
+                    page2.fadeIn();
+                    page3.fadeIn();
+                }
             });
-
-            $(".contact").click(function(){
-                pages.animate({ left: "-1660px" }, 400 );
-                page1.fadeOut();
-                page2.fadeIn();
-                page3.fadeIn();
-            });
+    
+            // Set page on initial load
+            var hash = $.param.fragment();
+            if( hash == 'more' ){
+                pages.css({ left: "-830px" })
+                page1.hide();
+                page2.show();
+            }
+            else if( hash == 'contact' ){
+                pages.css({ left: "-1660px" });
+                page1.hide();
+                page3.show();
+            }
         });
     </script>
 </head>
