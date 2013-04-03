@@ -27,6 +27,7 @@ h4 {
 
 nav a {
     text-decoration: none;
+    font-size: 14px;
 }
 
 .label { text-align: right; }
@@ -38,6 +39,7 @@ nav a {
     h3 { font-size: 17px; }
     h4 { font-size: 15px; }
     body { font-size: 12px; }
+    nav a { font-size: 12px; }
 }
 
 /* Layout */
@@ -84,7 +86,7 @@ nav {
     float: right;
     position: relative;
     top: -20px;
-    right: -20px;
+    right: -30px;
 }
 
 @media only screen and ( max-device-width: 640px ) and ( orientation: portrait ),
