@@ -83,8 +83,8 @@ section {
 nav {
     float: right;
     position: relative;
-    top: 5px;
-    right: -40px;
+    top: -20px;
+    right: -20px;
 }
 
 @media only screen and ( max-device-width: 640px ),
