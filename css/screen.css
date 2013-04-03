@@ -1,150 +1,156 @@
+/* Typography */
+
 body {
-    background-color: #CCC;
-    margin: 15px;
     font-family: 'Quicksand';
     font-size: 14px;
-    background-image: url('../img/light_toast.png');
 }
 
-h1, h2, h3, h4, .label {
-}
-
-h1 {
-    color: #5a843b;
-    margin-bottom: 2px;
-    font-weight: 400;
+h1 { 
+    font-size: 28px;
+    font-weight: 400; 
 }
 
 h2 {
-    color: #999;
-    margin-top: 2px;
     font-size: 19px;
     font-weight: 400;
 }
 
 h3 {
-    color: #82a449;
     font-size: 19px;
-    margin-top: 40px;
     font-weight: 400;
-    line-height: 10%;
 }
 
 h4 {
-    color: #999;
     font-size: 17px;
     font-weight: 400;
-    padding-top: 10px;
-    line-height: 10%;
 }
 
-p, li {
-    line-height: 140%;
+.label { text-align: right; }
+
+@media only screen and ( max-width: 600px ) {
+    h1 { font-size: 20px; }
+    h2 { font-size: 17px; }
+    h3 { font-size: 17px; }
+    h4 { font-size: 15px; }
+    body { font-size: 12px; }
 }
 
-p {
-    padding-left: 2px;
-}
+/* Layout */
 
-li {
-    padding-bottom: 3px;
-}
+body { margin: 15px; }
 
-ul {
-    padding-left: 19px;
-}
+h1 { margin-bottom: 2px; }
 
-a {
-    color: #000;
-}
+h2 { margin-top: 2px; }
 
-.content {
-    background-color: #FFF;
-    padding: 5px 57px 40px 57px;
-}
+h3 { margin-top: 40px; }
 
-.nav {
+h4 { padding-top: 10px; }
+
+p, li { line-height: 140%; }
+
+p { padding-left: 2px; }
+
+li { padding-bottom: 3px; }
+
+ul { padding-left: 19px; }
+
+.label { padding-right: 5px; }
+
+#contact-details {
+    float: right;
     position: relative;
-    background-color: #FFF;
-    color: black;
-    padding: 5px;
-    text-align: right;
-    background-image: url('../img/nav.png');
-    background-position:right;
-    background-repeat:no-repeat;
-    height: 18px;
+    top: -70px;
+    right: 10px;
 }
 
-.nav a {
-    color: #555;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.activelink {
-    font-weight: 700;
-}
-
-#allpages {
-    position: relative;
-    top: 1px;
-    left: 0px;
-    padding-right: 20px;
-}
-
-.page {
-    -moz-box-shadow: 0px 0px 10px #888;
-    -webkit-box-shadow: 0px 0px 10px #888;
-    box-shadow: 0px 0px 10px #888;
-    margin-bottom: 27px;
-    width: 860px;
+#wrap { 
+    width: 800px; 
     padding: 0px;
 }
 
-#page1 {
-    top; 0px;
-    left: 0px;
-    float: left;
+section { 
+    width: 100%; 
+    padding: 25px 35px 25px 35px;
+    margin: 14px 0px 14px 0px;
 }
 
-#page2 {
-    position: absolute;
-    top; 0px;
-    left: 890px;
-    display: none;
-}
-
-#page2 h1 {
-    color: #E68A2E;
-}
-
-#page2 h3 {
-    color: #FFA347;
-}
-
-#page3 {
-    position: absolute;
-    top; 0px;
-    left: 1780px;
-    display: none;
-}
-
-#page3 h1 {
-    color: #A30052;
-}
-
-#page3 h3 {
-    color: #B53375;
-}
-
-#contactdetails {
+nav {
     float: right;
     position: relative;
-    top: 20px;
+    top: 5px;
+    right: -40px;
 }
 
-.label {
-    text-align: right;
-    padding-right: 5px;
-    color: #6E8B3D;
+@media only screen and ( max-width: 600px ) {
+    body { margin: 0px; }
+
+    section { 
+        width: auto;
+        padding: 5px 15px 15px 15px; 
+    }
+
+    nav {
+        top: 7px;
+        right: 10px;
+    }
+
+    h3 { margin-top: 25px; }
+
+    h4 { padding-top: 0px; }
+
+    #contact-details { 
+        display: none;
+    }
+
+    #wrap { 
+        width: 100%; 
+        margin: 0px;
+    }
+}
+
+/* Colour */
+
+body {
+    background-color: #CCC;
+    background-image: url('../img/light_toast.png');
+}
+
+h1 { color: #5a843b; }
+
+#more h1 { color: #E68A2E; }
+
+#contact h1 { color: #A30052 }
+
+h2 { color: #999; }
+
+h3 { color: #82a449; }
+
+#more h3 { color: #FFA347 }
+
+#contact h3 { color: #B53375 }
+
+h4 { color: #999; }
+
+a { color: #000; }
+
+.label { color: #6E8B3D; }
+
+section {
+    background-color: #FFF;
+    -moz-box-shadow: 0px 0px 10px #888;
+    -webkit-box-shadow: 0px 0px 10px #888;
+    box-shadow: 0px 0px 10px #888;
+}
+
+#cv {
+    background-image: url('../img/nav.png');
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+
+@media only screen and ( max-width: 600px ) {
+    #cv {
+        background-position: 200px 200px;
+    }
 }
