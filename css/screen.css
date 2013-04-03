@@ -87,6 +87,16 @@ nav {
     right: -20px;
 }
 
+@media only screen and ( min-width: 641px ) and ( max-width: 900px ) {
+    section {
+	width: auto;
+    }
+
+    #wrap { 
+        width: auto; 
+    }
+}
+
 @media only screen and ( max-device-width: 640px ),
        only screen and ( max-width: 640px ) {
     body { margin: 0px; }
@@ -97,8 +107,8 @@ nav {
     }
 
     nav {
-        top: 7px;
-        right: 10px;
+        top: 3px;
+        right: 0px;
     }
 
     h3 { margin-top: 25px; }
@@ -158,6 +168,5 @@ section {
 @media only screen and ( max-device-width: 640px ),
        only screen and ( max-width: 640px ) {
     #cv {
-        background-position: 200px 200px;
     }
 }
