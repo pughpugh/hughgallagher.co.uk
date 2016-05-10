@@ -5,9 +5,9 @@ body {
     font-size: 14px;
 }
 
-h1 { 
+h1 {
     font-size: 28px;
-    font-weight: 400; 
+    font-weight: 400;
 }
 
 h2 {
@@ -71,31 +71,32 @@ ul { padding-left: 19px; }
     right: 10px;
 }
 
-#wrap { 
-    width: 800px; 
+#wrap {
+    width: 900px;
+    margin: auto;
     padding: 0px;
 }
 
-section { 
-    width: 100%; 
+section {
+    width: 100%;
     padding: 25px 35px 25px 35px;
-    margin: 14px 0px 14px 0px;
+    margin: 14px 0;
 }
 
 nav {
     float: right;
     position: relative;
-    top: -20px;
-    right: -30px;
+    top: -15px;
+    right: -25px;
 }
 
 @media only screen and ( max-device-width: 640px ) and ( orientation: portrait ),
             screen and ( max-width: 640px ){
     body { margin: 0px; }
 
-    section { 
+    section {
         width: auto;
-        padding: 5px 15px 15px 15px; 
+        padding: 5px 15px 15px 15px;
     }
 
     nav {
@@ -107,23 +108,23 @@ nav {
 
     h4 { padding-top: 0px; }
 
-    #contact-details { 
+    #contact-details {
         display: none;
     }
 
-    #wrap { 
-        width: 100%; 
+    #wrap {
+        width: 100%;
         margin: 0px;
     }
 }
 
 @media only screen and ( min-width: 641px ) and ( max-width: 900px ) {
     section {
-	width: auto;
+        width: auto;
     }
 
-    #wrap { 
-        width: auto; 
+    #wrap {
+        width: auto;
     }
 }
 
@@ -131,11 +132,13 @@ nav {
 /* Colour */
 
 body {
-    background-color: #CCC;
-    background-image: url('../img/light_toast.png');
+    background-color: #7CC77C;
 }
 
-h1 { color: #5a843b; }
+h1 {
+  margin-top: 10px;
+  color: #5a843b;
+}
 
 #more h1 { color: #E68A2E; }
 
@@ -157,13 +160,10 @@ a { color: #000; }
 
 section {
     background-color: #FFF;
-    -moz-box-shadow: 0px 0px 10px #888;
-    -webkit-box-shadow: 0px 0px 10px #888;
-    box-shadow: 0px 0px 10px #888;
+    box-shadow: 0px 5px 7px -3px #658065;
 }
 
 #cv {
-    background-image: url('../img/nav.png');
     background-position: right top;
     background-repeat: no-repeat;
 }
