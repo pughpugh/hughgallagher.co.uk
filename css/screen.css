@@ -134,7 +134,11 @@ nav {
 /* Colour */
 
 body {
-    background-color: #74B374;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../img/background.jpg');
+  background-color: #EFEFEF;
 }
 
 h1 {
@@ -146,7 +150,7 @@ h1 {
 
 #contact h1 { color: #A30052 }
 
-h2 { color: #999; }
+h2 { color: #666; }
 
 h3 { color: #82a449; }
 
@@ -162,7 +166,7 @@ a { color: #000; }
 
 section {
     background-color: #FFF;
-    box-shadow: 0px 5px 10px -1px #5F6F5F;
+    box-shadow: -3px 2px 20px -1px #999;
 }
 
 #cv {
