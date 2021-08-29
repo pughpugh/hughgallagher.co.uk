@@ -103,6 +103,15 @@ body {
             screen and ( max-width: 640px ) {
   .header {
     height: 200px;
+    padding: 15px;
+  }
+
+  .header__subtitle {
+    margin: 0 0 15px 0;
+  }
+
+  .header__title-wrapper {
+    bottom: initial;
   }
 
   .content {
