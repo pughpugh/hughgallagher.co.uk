@@ -8,8 +8,8 @@ body {
   font-size: 14px;
   padding: 0;
   margin: 0;
-  background: rgb(181 193 208);
-  background: linear-gradient(0deg, rgb(90 90 90) 0%, rgb(181 193 208) 100%);
+  background: rgb(240, 240, 240);
+  background: linear-gradient(0deg, rgb(170, 170, 170) 0%, rgb(240, 240, 240) 100%);
 }
 
 .wrapper {
