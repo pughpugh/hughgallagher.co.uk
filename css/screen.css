@@ -115,5 +115,6 @@ body {
 
   .content {
     padding: 0 15px 15px 15px;
+    margin-top: -10px;
   }
 }
