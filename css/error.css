@@ -1,5 +1,5 @@
 :root {
-  --color-primary: #7da545;
+  --color-primary: #507525;
   --color-text: #344238;
   --color-muted: #66796c;
   --color-bg-page: #f1f5f0;
@@ -62,6 +62,12 @@
 
 .error-card__link:hover {
   opacity: 0.8;
+}
+
+.error-card__link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 @media (prefers-color-scheme: dark) {

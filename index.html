@@ -94,8 +94,8 @@
         </header>
 
         <main class="content">
-          <section class="content__section">
-            <h3 class="content__title">Who am I?</h3>
+          <section class="content__section" aria-labelledby="section-about">
+            <h3 id="section-about" class="content__title">Who am I?</h3>
             <p class="content__paragraph">
               I'm a full-stack software engineer based in Milton Keynes with over 20 years of experience
               building for the web. My daily work revolves around Ruby on Rails and Stimulus.js, where I care
@@ -107,8 +107,8 @@
             </p>
           </section>
 
-          <section class="content__section">
-            <h3 class="content__title">Things I do</h3>
+          <section class="content__section" aria-labelledby="section-skills">
+            <h3 id="section-skills" class="content__title">Things I do</h3>
             <div class="skills">
               <div class="skills__group">
                 <h4 class="skills__group-title">
@@ -176,8 +176,8 @@
             </div>
           </section>
 
-          <section class="content__section">
-            <h3 class="content__title">Places I've worked</h3>
+          <section class="content__section" aria-labelledby="section-experience">
+            <h3 id="section-experience" class="content__title">Places I've worked</h3>
 
             <div class="timeline">
               <article class="timeline__item">
@@ -274,8 +274,8 @@
             </div>
           </section>
 
-          <section class="content__section">
-            <h3 class="content__title">Education</h3>
+          <section class="content__section" aria-labelledby="section-education">
+            <h3 id="section-education" class="content__title">Education</h3>
             <div class="education">
               <div class="education__card">
                 <span class="education__icon" aria-hidden="true"></span>
@@ -287,17 +287,19 @@
             </div>
           </section>
 
-          <section class="content__section">
-            <h3 class="content__title">Let's connect</h3>
+          <section class="content__section" aria-labelledby="section-connect">
+            <h3 id="section-connect" class="content__title">Let's connect</h3>
             <div class="connect">
               <div class="connect__links">
                 <a class="connect__btn" rel="me noopener noreferrer" href="https://github.com/pughpugh?tab=repositories" target="_blank">
                   <span class="connect__btn-icon connect__btn-icon--github" aria-hidden="true"></span>
                   <span>GitHub</span>
+                  <span class="sr-only">(opens in a new tab)</span>
                 </a>
                 <a class="connect__btn" rel="me noopener noreferrer" href="https://www.linkedin.com/in/hugh-gallagher-uk/" target="_blank">
                   <span class="connect__btn-icon connect__btn-icon--linkedin" aria-hidden="true"></span>
                   <span>LinkedIn</span>
+                  <span class="sr-only">(opens in a new tab)</span>
                 </a>
                 <a class="connect__btn connect__btn--primary" rel="me" href="mailto:hugh@hcgallagher.co.uk">
                   <span class="connect__btn-icon connect__btn-icon--mail" aria-hidden="true"></span>
