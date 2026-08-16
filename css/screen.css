@@ -838,7 +838,7 @@ body {
     color: #4b5563 !important;
   }
 
-  .connect {
+  .connect__links {
     gap: 8px !important;
   }
 
@@ -849,5 +849,27 @@ body {
     box-shadow: none !important;
     font-size: 8.5pt !important;
     padding: 5px 12px !important;
+    text-decoration: none !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .connect__btn--primary::after {
+    content: " (hugh@hcgallagher.co.uk)";
+    font-weight: normal;
+    color: #4b5563;
+  }
+
+  .connect__btn[href*="github"]::after {
+    content: " (github.com/pughpugh)";
+    font-weight: normal;
+    color: #4b5563;
+  }
+
+  .connect__btn[href*="linkedin"]::after {
+    content: " (linkedin.com/in/hugh-gallagher-uk)";
+    font-weight: normal;
+    color: #4b5563;
   }
 }
+
