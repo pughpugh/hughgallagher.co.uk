@@ -13,8 +13,19 @@
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 
+  function updateThemeMeta(theme) {
+    var meta = document.querySelector('meta[name="theme-color"]:not([media])');
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.name = 'theme-color';
+      document.head.appendChild(meta);
+    }
+    meta.content = theme === 'dark' ? '#0c110e' : '#f1f5f0';
+  }
+
   function updateToggleUI(theme) {
     var toggleBtn = document.getElementById('theme-toggle');
+    updateThemeMeta(theme);
     if (!toggleBtn) return;
     var isDark = theme === 'dark';
     toggleBtn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
@@ -36,11 +47,17 @@
     }
 
     if (window.matchMedia) {
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+      var mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      var handleChange = function (e) {
         if (!localStorage.getItem('theme')) {
           updateToggleUI(e.matches ? 'dark' : 'light');
         }
-      });
+      };
+      if (mediaQuery.addEventListener) {
+        mediaQuery.addEventListener('change', handleChange);
+      } else if (mediaQuery.addListener) {
+        mediaQuery.addListener(handleChange);
+      }
     }
   }
 

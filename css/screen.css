@@ -48,7 +48,6 @@
   --badge-border: rgba(255, 255, 255, 0.3);
   --badge-backdrop: none;
   --badge-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  --header-filter: none;
 
   /* Theme Toggle */
   --toggle-bg: rgba(255, 255, 255, 0.85);
@@ -96,7 +95,6 @@
   --badge-border: rgba(255, 255, 255, 0.2);
   --badge-backdrop: blur(8px);
   --badge-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  --header-filter: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
 
   --toggle-bg: rgba(18, 25, 20, 0.85);
   --toggle-color: #f2f7f3;
@@ -143,7 +141,6 @@
     --badge-border: rgba(255, 255, 255, 0.2);
     --badge-backdrop: blur(8px);
     --badge-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    --header-filter: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
 
     --toggle-bg: rgba(18, 25, 20, 0.85);
     --toggle-color: #f2f7f3;
@@ -175,6 +172,36 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Smooth Theme Transitions */
+body,
+.page,
+.header__title,
+.header__subtitle,
+.content__title,
+.content__paragraph,
+.skills__group,
+.skills__tag,
+.timeline,
+.timeline__item::before,
+.timeline__company,
+.timeline__role,
+.timeline__date,
+.timeline__list,
+.education__card,
+.education__degree,
+.education__meta,
+.connect__btn {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* Page Card Container */
 .page {
   max-width: var(--max-width);
@@ -190,7 +217,7 @@ body {
 
 /* Header Banner */
 .header {
-  background-image: var(--header-filter), url('../img/header.webp');
+  background-image: url('../img/header.webp');
   background-size: cover;
   background-position: center 30%;
   background-repeat: no-repeat;
@@ -202,6 +229,26 @@ body {
   align-items: flex-end;
 }
 
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+:root[data-theme="dark"] .header::before {
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .header::before {
+    opacity: 1;
+  }
+}
+
 .header__theme-toggle {
   position: absolute;
   top: 20px;
@@ -209,6 +256,8 @@ body {
 }
 
 .header__title-wrapper {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
