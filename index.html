@@ -6,14 +6,14 @@
     <meta name="description" content="Hugh Gallagher, Senior Software Engineer based in Milton Keynes specializing in Ruby on Rails, Stimulus.js, and modern full-stack web applications.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f1f5f0" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0c110e" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#0d120f" media="(prefers-color-scheme: dark)">
     <link rel="preload" as="image" href="img/header.webp" type="image/webp">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/screen.css?v=7" type="text/css" media="screen, print">
+    <link rel="stylesheet" href="css/screen.css?v=10" type="text/css" media="screen, print">
     <link rel="canonical" href="https://www.hughgallagher.co.uk/">
 
     <!-- Open Graph / Social Media -->
@@ -69,245 +69,267 @@
     <script src="js/app.js"></script>
 </head>
 <body>
-    <div class="page">
-        <header class="header">
-          <button id="theme-toggle" class="theme-toggle header__theme-toggle" type="button" aria-label="Toggle dark/light mode">
-            <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-            <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-          </button>
-          <div class="header__title-wrapper">
-            <h1 class="header__title">Hugh Gallagher</h1>
-            <h2 class="header__subtitle">Senior Software Engineer</h2>
-          </div>
+    <div class="site-wrapper">
+        <!-- Top Navigation Bar -->
+        <header class="nav">
+            <div class="nav__container">
+                <nav class="nav__menu" aria-label="Page Navigation">
+                    <a href="#section-about" class="nav__link">About</a>
+                    <span class="nav__sep" aria-hidden="true">|</span>
+                    <a href="#section-skills" class="nav__link">Skills</a>
+                    <span class="nav__sep" aria-hidden="true">|</span>
+                    <a href="#section-experience" class="nav__link">Experience</a>
+                    <span class="nav__sep" aria-hidden="true">|</span>
+                    <a href="#section-connect" class="nav__link">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark/light mode">
+                    <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
         </header>
 
-        <main class="content">
-          <section class="content__section" aria-labelledby="section-about">
-            <h3 id="section-about" class="content__title">Who am I?</h3>
-            <p class="content__paragraph">
-              I'm a full-stack software engineer based in Milton Keynes with over 20 years of experience
-              building for the web. My daily work revolves around Ruby on Rails and Stimulus.js, where I care
-              deeply about writing clean, maintainable code, solid test suites, and sensible API integrations.
-              I bring a collaborative mindset, a genuine curiosity for learning new tools, and I actively use
-              AI-assisted coding tools to help me explore solutions, refactor faster, and get things done.
-              At the end of the day, I just love solving practical problems and building software that people
-              enjoy using.
-            </p>
-          </section>
-
-          <section class="content__section" aria-labelledby="section-skills">
-            <h3 id="section-skills" class="content__title">Things I do</h3>
-            <div class="skills">
-              <div class="skills__group">
-                <h4 class="skills__group-title">
-                  <span class="skills__group-icon skills__group-icon--backend" aria-hidden="true"></span>
-                  <span>Backend</span>
-                </h4>
-                <div class="skills__tags">
-                  <span class="skills__tag">Ruby on Rails</span>
-                  <span class="skills__tag">Ruby</span>
-                  <span class="skills__tag">PostgreSQL</span>
-                  <span class="skills__tag">Apache Solr</span>
-                  <span class="skills__tag">REST APIs</span>
-                  <span class="skills__tag">ETL Pipelines</span>
-                  <span class="skills__tag">Third-Party Integrations</span>
+        <!-- Main Content -->
+        <main class="content-wrap">
+            <!-- Hero Section with Photo Banner & Identity Inside -->
+            <header class="hero-banner">
+                <div class="hero-banner__title-wrapper">
+                    <h1 class="hero-banner__title">Hugh Gallagher</h1>
+                    <p class="hero-banner__subtitle">Senior Software Engineer</p>
                 </div>
-              </div>
+            </header>
 
-              <div class="skills__group">
-                <h4 class="skills__group-title">
-                  <span class="skills__group-icon skills__group-icon--frontend" aria-hidden="true"></span>
-                  <span>Frontend</span>
-                </h4>
-                <div class="skills__tags">
-                  <span class="skills__tag">Stimulus.js</span>
-                  <span class="skills__tag">Hotwire (Turbo)</span>
-                  <span class="skills__tag">JavaScript (ES6+)</span>
-                  <span class="skills__tag">HTML5</span>
-                  <span class="skills__tag">CSS3</span>
-                  <span class="skills__tag">esbuild</span>
-                  <span class="skills__tag">Yarn</span>
+            <!-- About Section -->
+            <section class="section" aria-labelledby="section-about">
+                <h2 id="section-about" class="section__title">Who am I?</h2>
+                <p class="section__paragraph">
+                    I'm a full-stack software engineer based in Milton Keynes with over 20 years of experience
+                    building for the web. My daily work revolves around Ruby on Rails and Stimulus.js, where I care
+                    deeply about writing clean, maintainable code, solid test suites, and sensible API integrations.
+                    I bring a collaborative mindset, a genuine curiosity for learning new tools, and I actively use
+                    AI-assisted coding tools to help me explore solutions, refactor faster, and get things done.
+                    At the end of the day, I just love solving practical problems and building software that people
+                    enjoy using.
+                </p>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="section" aria-labelledby="section-skills">
+                <h2 id="section-skills" class="section__title">Things I do</h2>
+                <div class="skills">
+                    <div class="skills__group">
+                        <h3 class="skills__group-title">
+                            <span class="skills__group-icon skills__group-icon--backend" aria-hidden="true"></span>
+                            <span>Backend</span>
+                        </h3>
+                        <div class="skills__tags">
+                            <span class="skills__tag">Ruby on Rails</span>
+                            <span class="skills__tag">Ruby</span>
+                            <span class="skills__tag">PostgreSQL</span>
+                            <span class="skills__tag">Apache Solr</span>
+                            <span class="skills__tag">REST APIs</span>
+                            <span class="skills__tag">ETL Pipelines</span>
+                            <span class="skills__tag">Third-Party Integrations</span>
+                        </div>
+                    </div>
+
+                    <div class="skills__group">
+                        <h3 class="skills__group-title">
+                            <span class="skills__group-icon skills__group-icon--frontend" aria-hidden="true"></span>
+                            <span>Frontend</span>
+                        </h3>
+                        <div class="skills__tags">
+                            <span class="skills__tag">Stimulus.js</span>
+                            <span class="skills__tag">Hotwire (Turbo)</span>
+                            <span class="skills__tag">JavaScript (ES6+)</span>
+                            <span class="skills__tag">HTML5</span>
+                            <span class="skills__tag">CSS3</span>
+                            <span class="skills__tag">esbuild</span>
+                            <span class="skills__tag">Yarn</span>
+                        </div>
+                    </div>
+
+                    <div class="skills__group">
+                        <h3 class="skills__group-title">
+                            <span class="skills__group-icon skills__group-icon--ai" aria-hidden="true"></span>
+                            <span>AI &amp; Automation</span>
+                        </h3>
+                        <div class="skills__tags">
+                            <span class="skills__tag skills__tag--highlight">AI-Assisted Workflows</span>
+                            <span class="skills__tag skills__tag--highlight">Prompt Engineering</span>
+                            <span class="skills__tag">RSpec</span>
+                            <span class="skills__tag">Jest</span>
+                            <span class="skills__tag">CI/CD Pipelines</span>
+                            <span class="skills__tag">Code Reviews</span>
+                            <span class="skills__tag">APM &amp; Telemetry</span>
+                        </div>
+                    </div>
+
+                    <div class="skills__group">
+                        <h3 class="skills__group-title">
+                            <span class="skills__group-icon skills__group-icon--devops" aria-hidden="true"></span>
+                            <span>Infrastructure</span>
+                        </h3>
+                        <div class="skills__tags">
+                            <span class="skills__tag">Docker</span>
+                            <span class="skills__tag">AWS</span>
+                            <span class="skills__tag">Linux CLI</span>
+                            <span class="skills__tag">Bash</span>
+                            <span class="skills__tag">Git</span>
+                            <span class="skills__tag">Agile</span>
+                            <span class="skills__tag">Remote Collaboration</span>
+                        </div>
+                    </div>
                 </div>
-              </div>
+            </section>
 
-              <div class="skills__group">
-                <h4 class="skills__group-title">
-                  <span class="skills__group-icon skills__group-icon--ai" aria-hidden="true"></span>
-                  <span>AI &amp; Automation</span>
-                </h4>
-                <div class="skills__tags">
-                  <span class="skills__tag skills__tag--highlight">AI-Assisted Workflows</span>
-                  <span class="skills__tag skills__tag--highlight">Prompt Engineering</span>
-                  <span class="skills__tag">RSpec</span>
-                  <span class="skills__tag">Jest</span>
-                  <span class="skills__tag">CI/CD Pipelines</span>
-                  <span class="skills__tag">Code Reviews</span>
-                  <span class="skills__tag">APM &amp; Telemetry</span>
+            <!-- Experience Section -->
+            <section class="section" aria-labelledby="section-experience">
+                <h2 id="section-experience" class="section__title">Places I've worked</h2>
+
+                <div class="timeline">
+                    <article class="timeline__item">
+                        <div class="timeline__item-header">
+                            <div class="timeline__company-group">
+                                <h3 class="timeline__company">Keyloop</h3>
+                                <span class="timeline__role">Senior Software Engineer</span>
+                            </div>
+                            <span class="timeline__date">Oct 2024 &ndash; Present</span>
+                        </div>
+                        <ul class="timeline__list">
+                            <li class="timeline__list-item">Continued development and integration of the Vehicle Hub platform (formerly SalesMaster) following Keyloop's acquisition of ATG, working within distributed remote Agile teams.</li>
+                            <li class="timeline__list-item">Led a zero-downtime search infrastructure migration, upgrading Apache Solr from version 4 to 10 across millions of documents, significantly improving query latency, index performance, and schema reliability.</li>
+                            <li class="timeline__list-item">Architected and delivered the redevelopment of a sales event and activity timeline product, leveraging modern Rails tooling (Turbo and Stimulus.js) and modern CSS frameworks.</li>
+                            <li class="timeline__list-item">Proactively monitored application performance (APM) and production telemetry to triage issues, optimize database bottlenecks, and reduce error rates.</li>
+                            <li class="timeline__list-item">Integrating Vehicle Hub APIs with Keyloop's wider automotive retail ecosystem.</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline__item">
+                        <div class="timeline__item-header">
+                            <div class="timeline__company-group">
+                                <h3 class="timeline__company">Automotive Transformation Group</h3>
+                                <span class="timeline__role">Senior Software Engineer</span>
+                            </div>
+                            <span class="timeline__date">Apr 2022 &ndash; Oct 2024</span>
+                        </div>
+                        <ul class="timeline__list">
+                            <li class="timeline__list-item">Delivered the technical rebranding and platform transition of the core automotive product from SalesMaster to Vehicle Hub following the acquisition.</li>
+                            <li class="timeline__list-item">Built omnichannel sales integrations connecting Vehicle Hub with wider group services and third-party platforms.</li>
+                            <li class="timeline__list-item">Modernized the JavaScript toolchain by migrating to esbuild and Yarn, introducing Jest test coverage.</li>
+                            <li class="timeline__list-item">Championed code quality and engineering standards through thorough code reviews, architectural discussions, and automated CI pipelines.</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline__item">
+                        <div class="timeline__item-header">
+                            <div class="timeline__company-group">
+                                <h3 class="timeline__company">SalesMaster</h3>
+                                <span class="timeline__role">Senior Product Developer</span>
+                            </div>
+                            <span class="timeline__date">Nov 2013 &ndash; May 2022</span>
+                        </div>
+                        <ul class="timeline__list">
+                            <li class="timeline__list-item">Full-stack development of the company's core automotive sales and inventory platform using Ruby on Rails.</li>
+                            <li class="timeline__list-item">Maintained and enhanced the in-house ETL system for processing large-scale vehicle data feeds.</li>
+                            <li class="timeline__list-item">Integrated various third-party automotive APIs, manufacturer data feeds, and DMS systems.</li>
+                            <li class="timeline__list-item">Mentored junior developers in Ruby on Rails best practices, clean code design, and Git branching workflows.</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline__item">
+                        <div class="timeline__item-header">
+                            <div class="timeline__company-group">
+                                <h3 class="timeline__company">IMS Evolve</h3>
+                                <span class="timeline__role">Web Applications Developer</span>
+                            </div>
+                            <span class="timeline__date">June 2010 &ndash; Nov 2013</span>
+                        </div>
+                        <ul class="timeline__list">
+                            <li class="timeline__list-item">Developed web-based machine management systems and backend APIs in Perl (Catalyst, CGI, mod_perl) with Sencha ExtJS frontends.</li>
+                            <li class="timeline__list-item">Improved engineering standards by migrating version control from SVN to Git, introducing branching workflows, automated testing, and code documentation.</li>
+                            <li class="timeline__list-item">Maintained third-party integration projects using DBIx::Class and Moose.</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline__item">
+                        <div class="timeline__item-header">
+                            <div class="timeline__company-group">
+                                <h3 class="timeline__company">Redeye International</h3>
+                                <span class="timeline__role">Web Applications Developer</span>
+                            </div>
+                            <span class="timeline__date">Nov 2004 &ndash; June 2010</span>
+                        </div>
+                        <ul class="timeline__list">
+                            <li class="timeline__list-item">Developed and supported high-volume email marketing and analytics platforms using Perl and PostgreSQL (sending over 2M emails daily at peak).</li>
+                            <li class="timeline__list-item">Contributed to the design and implementation of an analytics web application with ExtJS and PHP.</li>
+                            <li class="timeline__list-item">Assisted with server migrations and configuration automation for infrastructure moves.</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline__item">
+                        <div class="timeline__item-header">
+                            <div class="timeline__company-group">
+                                <h3 class="timeline__company">Stockton Borough Carers Resource Centre</h3>
+                                <span class="timeline__role">Web Designer</span>
+                            </div>
+                            <span class="timeline__date">Sep 2003 &ndash; Apr 2004</span>
+                        </div>
+                        <ul class="timeline__list">
+                            <li class="timeline__list-item">Designed and developed a community content management system with PHP and MySQL as part of a final-year university partnership project.</li>
+                        </ul>
+                    </article>
                 </div>
-              </div>
+            </section>
 
-              <div class="skills__group">
-                <h4 class="skills__group-title">
-                  <span class="skills__group-icon skills__group-icon--devops" aria-hidden="true"></span>
-                  <span>Infrastructure</span>
-                </h4>
-                <div class="skills__tags">
-                  <span class="skills__tag">Docker</span>
-                  <span class="skills__tag">AWS</span>
-                  <span class="skills__tag">Linux CLI</span>
-                  <span class="skills__tag">Bash</span>
-                  <span class="skills__tag">Git</span>
-                  <span class="skills__tag">Agile</span>
-                  <span class="skills__tag">Remote Collaboration</span>
+            <!-- Education Section -->
+            <section class="section" aria-labelledby="section-education">
+                <h2 id="section-education" class="section__title">Education</h2>
+                <div class="education">
+                    <div class="education__card">
+                        <span class="education__icon" aria-hidden="true"></span>
+                        <div class="education__content">
+                            <h3 class="education__degree">BSc (Hons) Computer Studies</h3>
+                            <p class="education__meta">Teesside University &bull; 2:1 Classification</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </section>
+            </section>
 
-          <section class="content__section" aria-labelledby="section-experience">
-            <h3 id="section-experience" class="content__title">Places I've worked</h3>
-
-            <div class="timeline">
-              <article class="timeline__item">
-                <div class="timeline__item-header">
-                  <div class="timeline__company-group">
-                    <h4 class="timeline__company">Keyloop</h4>
-                    <span class="timeline__role">Senior Software Engineer</span>
-                  </div>
-                  <span class="timeline__date">Oct 2024 &ndash; Present</span>
+            <!-- Connect Section -->
+            <section class="section" aria-labelledby="section-connect">
+                <h2 id="section-connect" class="section__title">Let's connect</h2>
+                <div class="connect">
+                    <div class="connect__links">
+                        <a class="connect__btn" rel="me noopener noreferrer" href="https://github.com/pughpugh?tab=repositories" target="_blank">
+                            <span class="connect__btn-icon connect__btn-icon--github" aria-hidden="true"></span>
+                            <span>GitHub</span>
+                            <span class="sr-only">(opens in a new tab)</span>
+                        </a>
+                        <a class="connect__btn" rel="me noopener noreferrer" href="https://www.linkedin.com/in/hugh-gallagher-uk/" target="_blank">
+                            <span class="connect__btn-icon connect__btn-icon--linkedin" aria-hidden="true"></span>
+                            <span>LinkedIn</span>
+                            <span class="sr-only">(opens in a new tab)</span>
+                        </a>
+                        <a class="connect__btn connect__btn--primary" rel="me" href="mailto:hugh@hcgallagher.co.uk">
+                            <span class="connect__btn-icon connect__btn-icon--mail" aria-hidden="true"></span>
+                            <span>Email Me</span>
+                        </a>
+                    </div>
                 </div>
-                <ul class="timeline__list">
-                  <li class="timeline__list-item">Continued development and integration of the Vehicle Hub platform (formerly SalesMaster) following Keyloop's acquisition of ATG, working within distributed remote Agile teams.</li>
-                  <li class="timeline__list-item">Led a zero-downtime search infrastructure migration, upgrading Apache Solr from version 4 to 10 across millions of documents, significantly improving query latency, index performance, and schema reliability.</li>
-                  <li class="timeline__list-item">Architected and delivered the redevelopment of a sales event and activity timeline product, leveraging modern Rails tooling (Turbo and Stimulus.js) and modern CSS frameworks.</li>
-                  <li class="timeline__list-item">Proactively monitored application performance (APM) and production telemetry to triage issues, optimize database bottlenecks, and reduce error rates.</li>
-                  <li class="timeline__list-item">Integrating Vehicle Hub APIs with Keyloop's wider automotive retail ecosystem.</li>
-                </ul>
-              </article>
-
-              <article class="timeline__item">
-                <div class="timeline__item-header">
-                  <div class="timeline__company-group">
-                    <h4 class="timeline__company">Automotive Transformation Group</h4>
-                    <span class="timeline__role">Senior Software Engineer</span>
-                  </div>
-                  <span class="timeline__date">Apr 2022 &ndash; Oct 2024</span>
-                </div>
-                <ul class="timeline__list">
-                  <li class="timeline__list-item">Delivered the technical rebranding and platform transition of the core automotive product from SalesMaster to Vehicle Hub following the acquisition.</li>
-                  <li class="timeline__list-item">Built omnichannel sales integrations connecting Vehicle Hub with wider group services and third-party platforms.</li>
-                  <li class="timeline__list-item">Modernized the JavaScript toolchain by migrating to esbuild and Yarn, introducing Jest test coverage.</li>
-                  <li class="timeline__list-item">Championed code quality and engineering standards through thorough code reviews, architectural discussions, and automated CI pipelines.</li>
-                </ul>
-              </article>
-
-              <article class="timeline__item">
-                <div class="timeline__item-header">
-                  <div class="timeline__company-group">
-                    <h4 class="timeline__company">SalesMaster</h4>
-                    <span class="timeline__role">Senior Product Developer</span>
-                  </div>
-                  <span class="timeline__date">Nov 2013 &ndash; May 2022</span>
-                </div>
-                <ul class="timeline__list">
-                  <li class="timeline__list-item">Full-stack development of the company's core automotive sales and inventory platform using Ruby on Rails.</li>
-                  <li class="timeline__list-item">Maintained and enhanced the in-house ETL system for processing large-scale vehicle data feeds.</li>
-                  <li class="timeline__list-item">Integrated various third-party automotive APIs, manufacturer data feeds, and DMS systems.</li>
-                  <li class="timeline__list-item">Mentored junior developers in Ruby on Rails best practices, clean code design, and Git branching workflows.</li>
-                </ul>
-              </article>
-
-              <article class="timeline__item">
-                <div class="timeline__item-header">
-                  <div class="timeline__company-group">
-                    <h4 class="timeline__company">IMS Evolve</h4>
-                    <span class="timeline__role">Web Applications Developer</span>
-                  </div>
-                  <span class="timeline__date">June 2010 &ndash; Nov 2013</span>
-                </div>
-                <ul class="timeline__list">
-                  <li class="timeline__list-item">Developed web-based machine management systems and backend APIs in Perl (Catalyst, CGI, mod_perl) with Sencha ExtJS frontends.</li>
-                  <li class="timeline__list-item">Improved engineering standards by migrating version control from SVN to Git, introducing branching workflows, automated testing, and code documentation.</li>
-                  <li class="timeline__list-item">Maintained third-party integration projects using DBIx::Class and Moose.</li>
-                </ul>
-              </article>
-
-              <article class="timeline__item">
-                <div class="timeline__item-header">
-                  <div class="timeline__company-group">
-                    <h4 class="timeline__company">Redeye International</h4>
-                    <span class="timeline__role">Web Applications Developer</span>
-                  </div>
-                  <span class="timeline__date">Nov 2004 &ndash; June 2010</span>
-                </div>
-                <ul class="timeline__list">
-                  <li class="timeline__list-item">Developed and supported high-volume email marketing and analytics platforms using Perl and PostgreSQL (sending over 2M emails daily at peak).</li>
-                  <li class="timeline__list-item">Contributed to the design and implementation of an analytics web application with ExtJS and PHP.</li>
-                  <li class="timeline__list-item">Assisted with server migrations and configuration automation for infrastructure moves.</li>
-                </ul>
-              </article>
-
-              <article class="timeline__item">
-                <div class="timeline__item-header">
-                  <div class="timeline__company-group">
-                    <h4 class="timeline__company">Stockton Borough Carers Resource Centre</h4>
-                    <span class="timeline__role">Web Designer</span>
-                  </div>
-                  <span class="timeline__date">Sep 2003 &ndash; Apr 2004</span>
-                </div>
-                <ul class="timeline__list">
-                  <li class="timeline__list-item">Designed and developed a community content management system with PHP and MySQL as part of a final-year university partnership project.</li>
-                </ul>
-              </article>
-            </div>
-          </section>
-
-          <section class="content__section" aria-labelledby="section-education">
-            <h3 id="section-education" class="content__title">Education</h3>
-            <div class="education">
-              <div class="education__card">
-                <span class="education__icon" aria-hidden="true"></span>
-                <div class="education__content">
-                  <h4 class="education__degree">BSc (Hons) Computer Studies</h4>
-                  <p class="education__meta">Teesside University &bull; 2:1 Classification</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="content__section" aria-labelledby="section-connect">
-            <h3 id="section-connect" class="content__title">Let's connect</h3>
-            <div class="connect">
-              <div class="connect__links">
-                <a class="connect__btn" rel="me noopener noreferrer" href="https://github.com/pughpugh?tab=repositories" target="_blank">
-                  <span class="connect__btn-icon connect__btn-icon--github" aria-hidden="true"></span>
-                  <span>GitHub</span>
-                  <span class="sr-only">(opens in a new tab)</span>
-                </a>
-                <a class="connect__btn" rel="me noopener noreferrer" href="https://www.linkedin.com/in/hugh-gallagher-uk/" target="_blank">
-                  <span class="connect__btn-icon connect__btn-icon--linkedin" aria-hidden="true"></span>
-                  <span>LinkedIn</span>
-                  <span class="sr-only">(opens in a new tab)</span>
-                </a>
-                <a class="connect__btn connect__btn--primary" rel="me" href="mailto:hugh@hcgallagher.co.uk">
-                  <span class="connect__btn-icon connect__btn-icon--mail" aria-hidden="true"></span>
-                  <span>Email Me</span>
-                </a>
-              </div>
-            </div>
-          </section>
+            </section>
         </main>
     </div>
 </body>

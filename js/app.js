@@ -20,7 +20,7 @@
       meta.name = 'theme-color';
       document.head.appendChild(meta);
     }
-    meta.content = theme === 'dark' ? '#0c110e' : '#f1f5f0';
+    meta.content = theme === 'dark' ? '#0d120f' : '#f1f5f0';
   }
 
   function updateToggleUI(theme) {
