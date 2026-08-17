@@ -30,10 +30,9 @@
   --max-width: 980px;
 
   /* AI Tag Highlight */
-  --ai-tag-bg: #ece8f9;
-  --ai-tag-border: #c4b5fd;
-  --ai-tag-color: #3b226e;
-  --ai-tag-shadow: 0 1px 3px rgba(109, 40, 217, 0.08);
+  --ai-tag-border: #b8a2e8;
+  --ai-tag-color: #351c68;
+  --ai-tag-shadow: 0 1px 4px rgba(109, 40, 217, 0.12);
 
   /* Buttons */
   --btn-bg: #f9fbf9;
@@ -80,10 +79,9 @@
   --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
 
-  --ai-tag-bg: #221b36;
-  --ai-tag-border: rgba(196, 181, 253, 0.35);
+  --ai-tag-border: rgba(196, 181, 253, 0.4);
   --ai-tag-color: #ede5fa;
-  --ai-tag-shadow: 0 0 10px rgba(139, 92, 246, 0.15);
+  --ai-tag-shadow: 0 0 10px rgba(139, 92, 246, 0.18);
 
   --btn-bg: #19231c;
   --btn-color: #f3f8f4;
@@ -127,10 +125,9 @@
     --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
 
-    --ai-tag-bg: #221b36;
-    --ai-tag-border: rgba(196, 181, 253, 0.35);
+    --ai-tag-border: rgba(196, 181, 253, 0.4);
     --ai-tag-color: #ede5fa;
-    --ai-tag-shadow: 0 0 10px rgba(139, 92, 246, 0.15);
+    --ai-tag-shadow: 0 0 10px rgba(139, 92, 246, 0.18);
 
     --btn-bg: #19231c;
     --btn-color: #f3f8f4;
@@ -496,11 +493,53 @@ body,
 }
 
 .skills__tag--highlight {
-  background-color: var(--ai-tag-bg);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
   border: 1px solid var(--ai-tag-border);
   color: var(--ai-tag-color);
   font-weight: 600;
   box-shadow: var(--ai-tag-shadow);
+  background-color: transparent;
+}
+
+.skills__tag--highlight::before,
+.skills__tag--highlight::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  transition: opacity 0.3s ease;
+}
+
+/* Light mode: fresh mint to soft lavender gradient */
+.skills__tag--highlight::before {
+  background: linear-gradient(135deg, #dceed1 0%, #e8dbfc 100%);
+  opacity: 1;
+}
+
+/* Dark mode: rich emerald to violet gradient */
+.skills__tag--highlight::after {
+  background: linear-gradient(135deg, rgba(80, 117, 37, 0.42) 0%, rgba(139, 92, 246, 0.36) 100%);
+  opacity: 0;
+}
+
+:root[data-theme="dark"] .skills__tag--highlight::before {
+  opacity: 0;
+}
+
+:root[data-theme="dark"] .skills__tag--highlight::after {
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .skills__tag--highlight::before {
+    opacity: 0;
+  }
+  :root:not([data-theme="light"]) .skills__tag--highlight::after {
+    opacity: 1;
+  }
 }
 
 /* Career Timeline */
@@ -912,6 +951,11 @@ body,
     border: 1.5px solid #111827 !important;
     color: #111827 !important;
     font-weight: 600 !important;
+  }
+
+  .skills__tag--highlight::before,
+  .skills__tag--highlight::after {
+    display: none !important;
   }
 
   .timeline {
