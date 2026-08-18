@@ -55,6 +55,19 @@
 
     var currentActiveId = null;
 
+    function updateUrlHash(id) {
+      if (!window.history || !window.history.replaceState) return;
+      if (id) {
+        if (window.location.hash !== '#' + id) {
+          window.history.replaceState(null, '', '#' + id);
+        }
+      } else {
+        if (window.location.hash) {
+          window.history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+      }
+    }
+
     function setActiveLink(id) {
       if (currentActiveId === id) return;
       currentActiveId = id;
@@ -68,6 +81,8 @@
         linkMap[id].classList.add('nav__link--active');
         linkMap[id].setAttribute('aria-current', 'true');
       }
+
+      updateUrlHash(id);
     }
 
     if ('IntersectionObserver' in window) {
