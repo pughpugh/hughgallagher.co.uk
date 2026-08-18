@@ -1,0 +1,31 @@
+{
+  "name": "Hugh Gallagher - Senior Software Engineer",
+  "short_name": "Hugh Gallagher",
+  "description": "Hugh Gallagher, Senior Software Engineer based in Milton Keynes specialising in Ruby on Rails, Stimulus.js, and modern full-stack web applications.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f1f5f0",
+  "theme_color": "#507525",
+  "icons": [
+    {
+      "src": "favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

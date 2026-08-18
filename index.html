@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f1f5f0" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0d120f" media="(prefers-color-scheme: dark)">
-    <link rel="preload" as="image" href="img/header.webp" type="image/webp">
+    <link rel="preload" as="image" href="img/header.webp" type="image/webp" media="(min-width: 641px)">
+    <link rel="preload" as="image" href="img/header-mobile.webp" type="image/webp" media="(max-width: 640px)">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/screen.css?v=10" type="text/css" media="screen, print">
+    <link rel="stylesheet" href="css/screen.css?v=11" type="text/css" media="screen, print">
     <link rel="canonical" href="https://www.hughgallagher.co.uk/">
 
     <!-- Open Graph / Social Media -->
@@ -112,8 +114,8 @@
             </header>
 
             <!-- About Section -->
-            <section class="section" aria-labelledby="section-about">
-                <h2 id="section-about" class="section__title">Who am I?</h2>
+            <section id="section-about" class="section" aria-labelledby="section-about-title">
+                <h2 id="section-about-title" class="section__title">Who am I?</h2>
                 <p class="section__paragraph">
                     I'm a full-stack software engineer based in Milton Keynes with over 20 years of experience
                     building for the web. My daily work revolves around Ruby on Rails and Stimulus.js, where I care
@@ -126,8 +128,8 @@
             </section>
 
             <!-- Skills Section -->
-            <section class="section" aria-labelledby="section-skills">
-                <h2 id="section-skills" class="section__title">Things I do</h2>
+            <section id="section-skills" class="section" aria-labelledby="section-skills-title">
+                <h2 id="section-skills-title" class="section__title">Things I do</h2>
                 <div class="skills">
                     <div class="skills__group">
                         <h3 class="skills__group-title">
@@ -196,8 +198,8 @@
             </section>
 
             <!-- Experience Section -->
-            <section class="section" aria-labelledby="section-experience">
-                <h2 id="section-experience" class="section__title">Places I've worked</h2>
+            <section id="section-experience" class="section" aria-labelledby="section-experience-title">
+                <h2 id="section-experience-title" class="section__title">Places I've worked</h2>
 
                 <div class="timeline">
                     <article class="timeline__item">
@@ -295,8 +297,8 @@
             </section>
 
             <!-- Education Section -->
-            <section class="section" aria-labelledby="section-education">
-                <h2 id="section-education" class="section__title">Education</h2>
+            <section id="section-education" class="section" aria-labelledby="section-education-title">
+                <h2 id="section-education-title" class="section__title">Education</h2>
                 <div class="education">
                     <div class="education__card">
                         <span class="education__icon" aria-hidden="true"></span>
@@ -309,8 +311,8 @@
             </section>
 
             <!-- Connect Section -->
-            <section class="section" aria-labelledby="section-connect">
-                <h2 id="section-connect" class="section__title">Let's connect</h2>
+            <section id="section-connect" class="section" aria-labelledby="section-connect-title">
+                <h2 id="section-connect-title" class="section__title">Let's connect</h2>
                 <div class="connect">
                     <div class="connect__links">
                         <a class="connect__btn" rel="me noopener noreferrer" href="https://github.com/pughpugh?tab=repositories" target="_blank">
